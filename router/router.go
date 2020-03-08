@@ -9,7 +9,7 @@ func SetupRouter() (engine *gin.Engine) {
 	engine = gin.Default()
 
 	engine.Static("/static", "static")
-	engine.LoadHTMLGlob("templates/*")
+	engine.LoadHTMLGlob("template/*")
 	engine.GET("/", controller.IndexHandler)
 
 	v1Group := engine.Group("v1")
